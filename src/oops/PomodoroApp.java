@@ -18,7 +18,7 @@ public class PomodoroApp {
         frame.setAlwaysOnTop(true);
 
         timerLabel = new JLabel(String.valueOf(timeLeft), SwingConstants.CENTER); // Initialize timerLabel here
-        timerLabel.setFont(new Font("Consolas", Font.BOLD, 50));
+        timerLabel.setFont(new Font("Consolas", Font.BOLD, 100));
 
         JButton startButton = new JButton("Start");
         startButton.addActionListener(new ActionListener() {
@@ -31,7 +31,9 @@ public class PomodoroApp {
                             timeLeft--;
                             int minutes = timeLeft / 60;
                             int seconds = timeLeft % 60;
-                            timerLabel.setText(String.format("%02d:%02d", minutes, seconds));
+                            int firstDigitOfSeconds = seconds / 10;
+                            int lastDigitOfSeconds = seconds % 10;
+                            timerLabel.setText(String.format("<html>%02d:%d<font color='red'>%d</font></html>", minutes, firstDigitOfSeconds, lastDigitOfSeconds));
                             if (timeLeft <= 0) {
                                 timer.stop();
                                 timeLeft = POMODORO_TIME;
