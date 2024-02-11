@@ -49,4 +49,5 @@ public class CarAndLuxuryCar {
         // Call the openRoof method, but first downcast c1 to LuxuryCar
         ((LuxuryCar) c1).openRoof();
     }
+    
 }
