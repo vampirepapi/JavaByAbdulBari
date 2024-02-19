@@ -11,7 +11,8 @@ members	.
 * Static	members	can	be	accessed	just	by	using	class	name.	
 * The	static	members	of	a	class	are	created	in	the	method	area.	
 * Static	methods	can	access	only	static	members.	
- */
+* Only inner classes can be static, outer classess cant be static.
+*/
 
 // Define the class StaticMemebers
 public class StaticMemebers {
