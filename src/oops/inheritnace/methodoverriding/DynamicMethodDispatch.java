@@ -8,6 +8,15 @@ class Super{
         // Print a message
         System.out.println("super class display");
     }
+    public void namo() {
+        System.out.println("namo");
+        
+    }
+    public void sourabh() {
+        String s = "hi sourabh";
+        System.out.println("hi sourabh");
+        
+    }
 }
 
 // Define a Sub class that extends Super
@@ -17,6 +26,18 @@ class Sub extends Super{
     public void display(){
         // Print a different message
         System.out.println("sub class display");
+    }
+    public void shubham() {
+        System.out.println("Shubham");
+        
+    }
+    @Override
+    public void namo() {
+        System.out.println("rani");
+    }
+    public void sourabh() {
+        System.out.println("hi sourabh2");
+        
     }
 }
 
@@ -30,5 +51,8 @@ public class DynamicMethodDispatch {
         // Call the display method
         // Because sb is actually an instance of Sub, the overridden method in Sub is called
         sb.display();
+        sb.namo();
+        sb.sourabh();
+
     }
 }
